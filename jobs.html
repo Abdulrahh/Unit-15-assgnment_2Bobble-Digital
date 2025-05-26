@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- THE META tag was used to give browsers and search engines infromatiion about
+    the webpage, they help improve SEO and  page responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jobs – Bobble Digital</title>
+  <style>
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #e0e0e0;
+      color: #202124;
+    }
+
+    
+    header {
+      background-color: #ffffff;
+      padding: 20px 20px;       
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;     
+      position: relative;
+      z-index: 10;
+    }
+
+    
+    header img {
+      height: 100px;
+      width: auto;
+      margin-right: 20px;       
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border: 1px solid #007BFF;
+      border-radius: 4px;
+      color: #007BFF;
+      font-size: 14px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #007BFF;
+      color: #ffffff;
+    }
+
+    
+    main {
+      margin-top: 140px;
+      padding: 0 20px;   
+    }
+
+    
+    .jobs-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .jobs-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .apply-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .apply-button:hover {
+      background-color: #0056b3;
+    }
+
+    
+    .jobs-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 6px;
+    }
+
+    .job-card {
+      margin-bottom: 40px;
+    }
+
+    
+    .job-card .section {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+   
+    .job-card .section.title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+   
+    .job-card .section:last-child {
+      margin-bottom: 0;
+    }
+
+    
+    @media (max-width: 768px) {
+      main {
+        margin-top: 120px; 
+      }
+      .jobs-container {
+        margin: 20px auto;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Bobble Digital Logo">
+    <nav>
+      <ul>
+        <li><a href="BobbleDigitalWebsite(homepage).html">Home</a></li>
+        <li><a href="trainee_profile.html">Trainee Developer Profile</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="application_form.html">Application Form</a></li>
+        <li><a href="link_to_WebCourses.html">Web-Development Courses</a></li>
+        <li><a href="Contact_us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="jobs-header">
+      <h2>Start Your Career With Bobble Digital</h2>
+      <a href="application_form.html" class="apply-button">Apply Now</a>
+    </div>
+
+    <div class="jobs-container">
+      <!-- Job Card: Junior Web Developer -->
+      <div class="job-card">
+        <div class="section title">Job Title: Junior Web Developer</div>
+        <div class="section">
+          <strong>Qualifications:</strong><br>
+          Level 3 qualification or equivalent in Web Development, IT, or Computer Science<br>
+          Basic knowledge of HTML, CSS, and JavaScript<br>
+          Strong willingness to learn and work in a team
+        </div>
+        <div class="section">
+          <strong>Responsibilities:</strong><br>
+          Assist in building and updating website pages<br>
+          Collaborate with senior developers on real-world projects<br>
+          Test website functionality and fix basic bugs
+        </div>
+        <div class="section">
+          <strong>Growth Opportunities:</strong><br>
+          Progress to Front-End or Full-Stack Developer roles<br>
+          Gain experience with frameworks like React or Vue<br>
+          Access to internal mentorship and training workshops
+        </div>
+        <div class="section">
+          <a href="application_form.html" style="text-decoration: none; color: #007BFF;">Link to application form</a>
+        </div>
+      </div>
+
+      <!-- Job Card: Web Design Intern -->
+      <div class="job-card">
+        <div class="section title">Job Title: Web Design Intern</div>
+        <div class="section">
+          <strong>Qualifications:</strong><br>
+          Completed or currently enrolled in a web or graphic design course<br>
+          Familiar with tools like Figma, Canva, or Adobe XD<br>
+          Basic understanding of website structure and user experience
+        </div>
+        <div class="section">
+          <strong>Responsibilities:</strong><br>
+          Create mockups and visual designs for web pages<br>
+          Support developers with layout and design improvements<br>
+          Help ensure websites are responsive and accessible
+        </div>
+        <div class="section">
+          <strong>Growth Opportunities:</strong><br>
+          Transition into UI/UX Design or Front-End Development<br>
+          Build a professional design portfolio<br>
+          Receive feedback and mentoring from experienced designers
+        </div>
+        <div class="section">
+          <a href="application_form.html" style="text-decoration: none; color: #007BFF;">Link to application form</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
+
+
+
+
+
+

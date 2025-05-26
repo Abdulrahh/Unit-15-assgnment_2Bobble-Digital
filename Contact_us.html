@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Bobble Digital</title>
+
+  <style>
+ 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #e0e0e0;
+      color: #202124;
+      
+    }
+
+    
+    header {
+      background-color: #ffffff;      
+      padding: 20px 20px;             
+      border-bottom: 1px solid #ccc;  
+      position: relative;             
+      z-index: 10;                    
+      display: flex;
+      align-items: center;           
+    }
+
+    
+    header img {
+      height: 100px;        
+      width: auto; 
+    }
+
+    nav {
+      
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border: 1px solid #007BFF;
+      border-radius: 4px;
+      color: #007BFF;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background-color: #007BFF;
+      color: #ffffff;
+    }
+
+   
+    main {
+      margin-top: 140px; 
+      padding: 0 20px;  
+    }
+
+   
+    .contact-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    
+    .column.left {
+      flex: 1;
+      min-width: 280px;
+      background-color: #e0e0e0; 
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    
+    .column.right {
+      flex: 1;
+      min-width: 280px;
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #999;
+    }
+
+   
+    .column.left .box,
+    .column.right .box {
+      background-color: #fff;
+      border: 1px solid #999;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 16px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Map container styling */
+    .map-container {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #999;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Contact Form fields */
+    .column.right form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .column.right input[type="text"],
+    .column.right input[type="email"],
+    .column.right textarea {
+      border: 1px solid #999;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 14px;
+      width: 100%;
+      resize: vertical;
+    }
+
+    .column.right input::placeholder,
+    .column.right textarea::placeholder {
+      color: #5f6368;
+    }
+
+    .column.right button {
+      background-color: #1A73E8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .column.right button:hover {
+      background-color: #1669C1;
+    }
+
+   
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+
+      
+      main {
+        margin-top: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER + NAVIGATION -->
+  <header>
+    <!-- Doubled-size logo -->
+    <img src="logo.png" alt="Bobble Digital Logo" />
+
+    <nav>
+      <ul>
+        <li><a href="BobbleDigitalWebsite(homepage).html">Home</a></li>
+        <li><a href="trainee_profile.html">Trainee Developer Profile</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="application_form.html">Application Form</a></li>
+        <li><a href="link_to_WebCourses.html">Web-Development Courses</a></li>
+        <li><a href="Contact_us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+      <!-- LEFT COLUMN -->
+      <div class="column left">
+        <div class="box">
+          <strong>Description on Where to Find Us</strong><br />
+          Bobble Digital operates out of a modern coworking space in Leeds city centre. Our office is easily accessible via public transport.
+        </div>
+        <div class="box">
+          <strong>Company Email &amp; Phone Number</strong><br />
+          Email: <a href="mailto:info@bobbledigital.com">info@bobbledigital.com</a><br />
+          Phone: +44 788 587991
+        </div>
+        <div class="map-container">
+         
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.363086679361!2d-2.237340684183766!3d53.48075957997937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bbdfb9b254e01%3A0x6bbdf7a7f9cc0cc6!2sManchester%20City%20Centre!5e0!3m2!1sen!2suk!4v1617184042733!5m2!1sen!2suk"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="column right">
+        <div class="box">
+          <strong>Contact Form</strong>
+        </div>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <textarea name="reason" rows="4" placeholder="Reason for Contact" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--THE META tag was used to give browsers and search engines information about
+    the webpage, they help improve SEO and page responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trainee Profile – Bobble Digital</title>
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #e0e0e0;
+            color: #202124;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 20px;       
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;      
+            position: relative;
+            z-index: 10;
+        }
+
+        
+        header img {
+            height: 100px;
+            width: auto;
+            margin-right: 20px;       /* Space between logo and navigation links*/
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            color: #007BFF;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+        }
+
+        /* Ensure main content sits below the header */
+        main {
+            margin-top: 140px; 
+            padding: 0 20px;  
+        }
+
+        /* Profile card styling */
+        .profile-card {
+            display: flex;
+            align-items: flex-start;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 4px;
+            max-width: 600px;
+            margin: 40px auto; 
+        }
+
+        .profile-photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin-right: 30px;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info .name,
+        .profile-info .qualification {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            width: fit-content;
+        }
+
+        .profile-info .bio {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+            line-height: 1.4;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive adjustment */
+        @media (max-width: 768px) {
+            main {
+                margin-top: 120px;
+            }
+            .profile-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-photo img {
+                margin: 0 0 20px;
+            }
+            .profile-card {
+                max-width: calc(100% - 40px);
+                margin: 20px auto;
+            }
+            .profile-info .name,
+            .profile-info .qualification,
+            .profile-info .bio {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Bobble Digital Logo">
+        <nav>
+            <ul>
+                <li><a href="BobbleDigitalWebsite(homepage).html">Home</a></li> 
+                <li><a href="trainee_profile.html">Trainee Developer Profile</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="application_form.html">Application Form</a></li>
+                <li><a href="link_to_WebCourses.html">Web-Development Courses</a></li>
+                <li><a href="Contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Profile Card 1 -->
+        <div class="profile-card">
+            <div class="profile-photo">
+              <img src="female_2.png" alt="female employee photo">
+            </div>
+            <div class="profile-info">
+                <div class="name">Alisa Smit</div>
+                <div class="qualification">BSc Computer Science</div>
+                <div class="bio">
+                  Alisa is a creative trainee developer at Bobble Digital.
+                  <br>She specialises in HTML, CSS, and JavaScript.
+                  <br>Alisa loves building responsive websites with clean, modern designs.
+                  <br>She is always eager to learn and grow in the tech industry.
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Card 2 -->
+        <div class="profile-card">
+            <div class="profile-photo">
+              <img src="male_2.png" alt="male employee photo">
+            </div>
+            <div class="profile-info">
+                <div class="name">Derrick Johnson</div>
+                <div class="qualification">BSc Computer Science</div>
+                <div class="bio">
+                  Derrick is a focused and detail-oriented trainee developer at Bobble Digital.
+                  <br>He enjoys JavaScript and learning back-end development.
+                  <br>Derrick is passionate about solving problems through clean code.
+                  <br>He's currently expanding his skills in full-stack web development.
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
