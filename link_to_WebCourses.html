@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Development Courses – Bobble Digital</title>
+  <style>
+    /* 1. Universal Reset + Base Font */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #e0e0e0;
+      color: #202124;
+    }
+
+    /* 2. Header + Navigation Styling (same as Contact page) */
+    header {
+      background-color: #ffffff;
+      padding: 20px 20px;       /* Enough vertical space for the 100px-tall logo */
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;      /* Vertically center logo + nav */
+    }
+
+    header img {
+      height: 100px;            /* Doubled logo height for clarity */
+      width: auto;
+      margin-right: 20px;       /* Space between logo and nav */
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border: 1px solid #007BFF;
+      border-radius: 4px;
+      color: #007BFF;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background-color: #007BFF;
+      color: #ffffff;
+    }
+
+    
+    main {
+      margin-top: 140px; 
+      padding: 0 20px;   
+    }
+
+    
+    .info-box {
+      border: 1px solid #999;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 24px;
+      background-color: #fff;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    
+    .columns {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    
+    .column {
+      flex: 1;
+      min-width: 240px;
+      background-color: #e0e0e0; 
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .column.middle {
+      background-color: #fff;    
+    }
+
+    
+    .column .box {
+      background-color: #fff;
+      border: 1px solid #999;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 16px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .column .box a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .column .box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Right column (small) with contact info */
+    .column.small {
+      flex: 0 0 200px;
+      min-width: 180px;
+      background-color: #fff;
+      padding: 16px;
+      border: 1px solid #999;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    /* Responsive: stack columns on narrow screens */
+    @media (max-width: 768px) {
+      .columns {
+        flex-direction: column;
+      }
+      .column.small {
+        margin-top: 20px;
+      }
+     
+      main {
+        margin-top: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER + NAVIGATION -->
+  <header>
+    <img src="logo.png" alt="Bobble Digital Logo" />
+    <nav>
+      <ul>
+        <li><a href="BobbleDigitalWebsite(homepage).html">Home</a></li>
+        <li><a href="trainee_profile.html">Trainee Developer Profile</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="application_form.html">Application Form</a></li>
+        <li><a href="link_to_WebCourses.html">Web-Development Courses</a></li>
+        <li><a href="Contact_us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="info-box">
+      This page contains the courses you will need to become a full-stack, front-end, or back-end developer.
+      Also includes links to W3Schools web courses covering the necessary skills for each role.
+    </div>
+
+    <div class="columns">
+      <!-- Left Column -->
+      <div class="column">
+        <div class="box">
+          <strong>Learn HTML and CSS</strong><br />
+          Basic front-end foundations for responsive design.
+        </div>
+        <div class="box">
+          <strong>Job Specification</strong><br />
+          Front-End Developer: Build responsive UI components.
+        </div>
+        <div class="box">
+          <a href="https://www.w3schools.com/html/" target="_blank">
+            Link to W3Schools Course
+          </a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="column middle">
+        <div class="box">
+          <strong>Learn PHP, Python, Node.js, and SQL</strong><br />
+          Key back-end languages and databases for server-side logic.
+        </div>
+        <div class="box">
+          <strong>Job Specification</strong><br />
+          Back-End Developer: Develop server-side logic & APIs.
+        </div>
+        <div class="box">
+          <a href="https://www.w3schools.com/nodejs/" target="_blank">
+            Link to W3Schools Course
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column (Senior Developer Contact) -->
+      <div class="column small">
+        <strong>Our Senior Developer Contact Info</strong><br />
+        Phone: +44 7234 567890<br />
+        (In case of any course or technical issue)
+      </div>
+    </div>
+  </main>
+</body>
+</html>
