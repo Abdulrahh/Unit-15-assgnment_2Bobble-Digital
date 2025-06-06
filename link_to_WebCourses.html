@@ -6,7 +6,7 @@
   <title>Web Development Courses – Bobble Digital</title>
   <style>
     /* 1. Universal Reset + Base Font */
-    * {
+     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -18,32 +18,51 @@
       color: #202124;
     }
 
-    /* 2. Header + Navigation Styling (same as Contact page) */
+    /* 2. Header + Navigation Styling */
     header {
       background-color: #ffffff;
-      padding: 20px 20px;       /* Enough vertical space for the 100px-tall logo */
+      padding: 20px 20px; /* Enough vertical space for the 100px-tall logo */
       border-bottom: 1px solid #ccc;
       position: relative;
       z-index: 10;
+
+      
+      /* Keep header as a flex container */
       display: flex;
-      align-items: center;      /* Vertically center logo + nav */
+      align-items: center;
+
+      /* Push logo to left, nav to right */
+      justify-content: space-between;
+
+      /* Allow header contents (logo + nav) to wrap onto multiple lines if needed */
+      flex-wrap: wrap;
+     
     }
 
     header img {
-      height: 100px;            /* Doubled logo height for clarity */
+      height: 100px; /* Doubled logo height for clarity */
       width: auto;
-      margin-right: 20px;       /* Space between logo and nav */
+      margin-right: 20px; /* Space between logo and nav on wide screens */
     }
 
     nav {
       display: flex;
       align-items: center;
+
+     
+      /* If the nav block can’t fit beside the logo, allow it to wrap below */
+      flex-wrap: wrap;
+      
     }
 
     nav ul {
       list-style: none;
       display: flex;
       padding: 0;
+
+      
+      flex-wrap: wrap;
+     
     }
 
     nav li {
@@ -65,13 +84,11 @@
       color: #ffffff;
     }
 
-    
     main {
-      margin-top: 140px; 
-      padding: 0 20px;   
+      margin-top: 140px; /* 100px (logo) + ~40px padding/border */
+      padding: 0 20px;   /* Optional side padding */
     }
 
-    
     .info-box {
       border: 1px solid #999;
       border-radius: 8px;
@@ -83,27 +100,24 @@
       line-height: 1.4;
     }
 
-    
     .columns {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
 
-    
     .column {
       flex: 1;
       min-width: 240px;
-      background-color: #e0e0e0; 
+      background-color: #e0e0e0;
       padding: 16px;
       border-radius: 8px;
     }
 
     .column.middle {
-      background-color: #fff;    
+      background-color: #fff;
     }
 
-    
     .column .box {
       background-color: #fff;
       border: 1px solid #999;
@@ -145,9 +159,20 @@
       .column.small {
         margin-top: 20px;
       }
-     
+
       main {
         margin-top: 120px;
+      }
+    }
+
+    /* shrink link padding/font on very narrow phones  */
+    @media (max-width: 500px) {
+      nav a {
+        font-size: 12px;
+        padding: 6px 8px;
+      }
+      nav li {
+        margin: 0 4px;
       }
     }
   </style>
