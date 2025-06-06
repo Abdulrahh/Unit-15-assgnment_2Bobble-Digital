@@ -5,178 +5,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – Bobble Digital</title>
 
-  <style>
- 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+ <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
 
-    body {
-      background-color: #e0e0e0;
-      color: #202124;
-      
-    }
+  body {
+    background-color: #e0e0e0;
+    color: #202124;
+  }
 
-    
-    header {
-      background-color: #ffffff;      
-      padding: 20px 20px;             
-      border-bottom: 1px solid #ccc;  
-      position: relative;             
-      z-index: 10;                    
-      display: flex;
-      align-items: center;           
-    }
+  header {
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    z-index: 10;
 
-    
-    header img {
-      height: 100px;        
-      width: auto; 
-    }
+    /* 1) Keep header as flex */
+    display: flex;
+    align-items: center;
 
-    nav {
-      
-      display: flex;
-      align-items: center;
-    }
+    /* 2) Push logo left, nav right */
+    justify-content: space-between;
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-    }
+    /* 3) Allow wrapping if absolutely needed */
+    flex-wrap: wrap;
+  }
 
-    nav li {
-      margin: 0 10px;
-    }
+  header img {
+    height: 100px;
+    width: auto;
+  }
 
-    nav a {
-      text-decoration: none;
-      padding: 8px 12px;
-      border: 1px solid #007BFF;
-      border-radius: 4px;
-      color: #007BFF;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      font-size: 14px;
-    }
+  nav {
+    display: flex;
+    align-items: center;
 
-    nav a:hover {
-      background-color: #007BFF;
-      color: #ffffff;
-    }
+    /* (optional) allow entire nav to drop below if needed */
+    flex-wrap: wrap;
+  }
 
-   
-    main {
-      margin-top: 140px; 
-      padding: 0 20px;  
-    }
+  nav ul {
+    list-style: none;
+    padding: 0;
 
-   
+    /* keep links on one row until they run out of space, then wrap */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    margin: 0 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    color: #007BFF;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+  }
+
+  main {
+    margin-top: 140px;
+    padding: 0 20px;
+  }
+
+  .contact-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .column.left {
+    flex: 1;
+    min-width: 280px;
+    background-color: #e0e0e0;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .column.right {
+    flex: 1;
+    min-width: 280px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #999;
+  }
+
+  .column.left .box,
+  .column.right .box {
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .column.right form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .column.right input[type="text"],
+  .column.right input[type="email"],
+  .column.right textarea {
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    resize: vertical;
+  }
+
+  .column.right input::placeholder,
+  .column.right textarea::placeholder {
+    color: #5f6368;
+  }
+
+  .column.right button {
+    background-color: #1A73E8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  .column.right button:hover {
+    background-color: #1669C1;
+  }
+
+  @media (max-width: 768px) {
     .contact-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    
-    .column.left {
-      flex: 1;
-      min-width: 280px;
-      background-color: #e0e0e0; 
-      padding: 16px;
-      border-radius: 8px;
-    }
-
-    
-    .column.right {
-      flex: 1;
-      min-width: 280px;
-      background-color: #fff;
-      padding: 16px;
-      border-radius: 8px;
-      border: 1px solid #999;
-    }
-
-   
-    .column.left .box,
-    .column.right .box {
-      background-color: #fff;
-      border: 1px solid #999;
-      border-radius: 6px;
-      padding: 12px;
-      margin-bottom: 16px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    /* Map container styling */
-    .map-container {
-      width: 100%;
-      height: 200px;
-      border: 1px solid #999;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* Contact Form fields */
-    .column.right form {
-      display: flex;
       flex-direction: column;
-      gap: 12px;
     }
 
-    .column.right input[type="text"],
-    .column.right input[type="email"],
-    .column.right textarea {
-      border: 1px solid #999;
-      border-radius: 6px;
-      padding: 10px;
-      font-size: 14px;
-      width: 100%;
-      resize: vertical;
+    main {
+      margin-top: 120px;
     }
+  }
 
-    .column.right input::placeholder,
-    .column.right textarea::placeholder {
-      color: #5f6368;
+ 
+  @media (max-width: 500px) {
+    nav a {
+      font-size: 12px;
+      padding: 6px 8px;
     }
-
-    .column.right button {
-      background-color: #1A73E8;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      padding: 12px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 8px;
+    nav li {
+      margin: 0 4px;
     }
-
-    .column.right button:hover {
-      background-color: #1669C1;
-    }
-
-   
-    @media (max-width: 768px) {
-      .contact-container {
-        flex-direction: column;
-      }
-
-      
-      main {
-        margin-top: 120px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
