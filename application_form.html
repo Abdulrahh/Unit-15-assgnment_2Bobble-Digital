@@ -6,132 +6,159 @@
     <meta name="viewport"
     content="width=device-width, initial-scale=1.0" />
     <title>Application Form</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+     <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        body {
-            background: #e0e0e0;
-            color: #202124;
-        }
+    body {
+      background: #e0e0e0;
+      color: #202124;
+    }
 
+    /* Header styling (logo + navigation) */
+    header {
+      background-color: #ffffff;
+      padding: 20px 20px;
+      border-bottom: 1px solid #ccc;
+
+      /* Keep the header as a flex container */
+      display: flex;
+      align-items: center;
+
+      justify-content: space-between;
+
+     
+      flex-wrap: wrap;
+    
+      position: relative;
+      z-index: 10;
+    }
+
+    header img {
+      height: 100px;
+      width: auto;
+      margin-right: 20px; /* Space between logo and nav on wide screens */
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+    
+      flex-wrap: wrap;
+      
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+
+      
         
-        header {
-            background-color: #ffffff;
-            padding: 20px 20px;       
-            border-bottom: 1px solid #ccc;
-            position: relative;
-            z-index: 10;
-            display: flex;
-            align-items: center;      
-        }
+      flex-wrap: wrap;
+      
+    }
 
-        header img {
-            height: 100px;          
-            width: auto;
-            margin-right: 20px;       /* Space between logo and nav */
-        }
+    nav li {
+      margin: 0 10px;
+    }
 
-        nav {
-            display: flex;
-            align-items: center;
-        }
+    nav a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border: 1px solid #007BFF;
+      border-radius: 4px;
+      color: #007BFF;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-        }
+    nav a:hover {
+      background-color: #007BFF;
+      color: #ffffff;
+    }
 
-        nav li {
-            margin: 0 10px;
-        }
+    /* Ensure main content sits below the header */
+    main {
+      margin-top: 140px; /* 100px (logo) + ~40px padding/border */
+      padding: 0 20px;   /* Optional side padding */
+    }
 
-        nav a {
-            text-decoration: none;
-            padding: 8px 12px;
-            border: 1px solid #007BFF;
-            border-radius: 4px;
-            color: #007BFF;
-            transition: background-color 0.3s ease,
-                        color 0.3s ease;
-            font-size: 14px;
-        }
+    /* Form container */
+    .form-container {
+      background: #f5f5f5;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
 
-        nav a:hover {
-            background-color: #007BFF;
-            color: #ffffff;
-        }
+    .form-field {
+      display: block;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      width: calc(100% - 22px);
+    }
 
-        /* Ensure main content sits below the header */
-        main {
-            margin-top: 140px; /* 100px (logo) + ~40px padding/border */
-            padding: 0 20px;   /* Optional side padding */
-        }
+    .offset-small {
+      margin-left: 20px;
+      width: calc(90% - 22px);
+    }
 
-        /* Form container */
-        .form-container {
-            background: #f5f5f5;
-            padding: 30px;
-            max-width: 600px;
-            margin: 0 auto;
-            border-radius: 6px;
-        }
+    .offset-medium {
+      margin-left: 40px;
+      width: calc(80% - 22px);
+    }
 
-        .form-field {
-            display: block;
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 10px;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            width: calc(100% - 22px);
-        }
+    .offset-large {
+      margin-left: 60px;
+      width: calc(70% - 22px);
+    }
 
-        .offset-small {
-            margin-left: 20px;
-            width: calc(90% - 22px);
-        }
+    .submit-btn {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
 
-        .offset-medium {
-            margin-left: 40px;
-            width: calc(80% - 22px);
-        }
+    .submit-btn:hover {
+      background: #45A049;
+    }
 
-        .offset-large {
-            margin-left: 60px;
-            width: calc(70% - 22px);
-        }
+    /* Responsive adjustment */
+    @media (max-width: 768px) {
+      main {
+        margin-top: 120px;
+      }
+    }
 
-        .submit-btn {
-            display: block;
-            width: 200px;
-            margin: 0 auto;
-            padding: 10px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 6px;
-            background: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            background: #45A049;
-        }
-
-        /* Responsive adjustment */
-        @media (max-width: 768px) {
-            main {
-                margin-top: 120px; 
-            }
-        }
-    </style>
+    /* Shrink link padding/font on very narrow screens  */
+    @media (max-width: 500px) {
+      nav a {
+        font-size: 12px;
+        padding: 6px 8px;
+      }
+      nav li {
+        margin: 0 4px;
+      }
+    }
+  </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
