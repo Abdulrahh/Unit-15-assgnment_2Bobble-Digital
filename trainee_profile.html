@@ -8,168 +8,137 @@
     <style>
         
         * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    body {
-      background: #e0e0e0;
-      color: #202124;
-    }
+        body {
+            background: #e0e0e0;
+            color: #202124;
+        }
 
-    /* ===== Header + Navigation Styling ===== */
-    header {
-      background-color: #ffffff;
-      padding: 20px 20px;       
-      border-bottom: 1px solid #ccc;
+        header {
+            background-color: #ffffff;
+            padding: 20px 20px;       
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;      
+            position: relative;
+            z-index: 10;
+        }
 
-      
-      /* Keep header as a flex container */
-      display: flex;
-      align-items: center;
+        
+        header img {
+            height: 100px;
+            width: auto;
+            margin-right: 20px;       /* Space between logo and navigation links*/
+        }
 
-      /* Push logo left, nav right */
-      justify-content: space-between;
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-      /* Allow header contents (logo + nav) to wrap onto another line if needed */
-      flex-wrap: wrap;
-     
-      position: relative;
-      z-index: 10;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
 
-    header img {
-      height: 100px;
-      width: auto;
-      margin-right: 20px; /* Space between logo and nav on wide screens */
-    }
+        nav li {
+            margin: 0 10px;
+        }
 
-    nav {
-      display: flex;
-      align-items: center;
+        nav a {
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            color: #007BFF;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-     
-      /* Allow the nav block itself to wrap under the logo if it can’t fit */
-      flex-wrap: wrap;
-     
-    }
+        nav a:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
+        /* Ensure main content sits below the header */
+        main {
+            margin-top: 140px; 
+            padding: 0 20px;  
+        }
 
-   
-      /* Let the <li> items wrap onto a second line if there’s not enough width */
-      flex-wrap: wrap;
-     
-    }
+        /* Profile card styling */
+        .profile-card {
+            display: flex;
+            align-items: flex-start;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 4px;
+            max-width: 600px;
+            margin: 40px auto; 
+        }
 
-    nav li {
-      margin: 0 10px;
-    }
+        .profile-photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin-right: 30px;
+        }
 
-    nav a {
-      text-decoration: none;
-      padding: 8px 12px;
-      border: 1px solid #007BFF;
-      border-radius: 4px;
-      color: #007BFF;
-      font-size: 14px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+        .profile-info {
+            flex: 1;
+        }
 
-    nav a:hover {
-      background-color: #007BFF;
-      color: #ffffff;
-    }
+        .profile-info .name,
+        .profile-info .qualification {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            width: fit-content;
+        }
 
-    /* Ensure main content sits below the header */
-    main {
-      margin-top: 140px; 
-      padding: 0 20px;  
-    }
+        .profile-info .bio {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+            line-height: 1.4;
+            font-size: 0.95rem;
+        }
 
-    /* Profile card styling */
-    .profile-card {
-      display: flex;
-      align-items: flex-start;
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 4px;
-      max-width: 600px;
-      margin: 40px auto; 
-    }
-
-    .profile-photo img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin-right: 30px;
-    }
-
-    .profile-info {
-      flex: 1;
-    }
-
-    .profile-info .name,
-    .profile-info .qualification {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 10px;
-      margin-bottom: 15px;
-      font-size: 1rem;
-      width: fit-content;
-    }
-
-    .profile-info .bio {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 15px;
-      line-height: 1.4;
-      font-size: 0.95rem;
-    }
-
-    /* Responsive adjustment */
-    @media (max-width: 768px) {
-      main {
-        margin-top: 120px;
-      }
-      .profile-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .profile-photo img {
-        margin: 0 0 20px;
-      }
-      .profile-card {
-        max-width: calc(100% - 40px);
-        margin: 20px auto;
-      }
-      .profile-info .name,
-      .profile-info .qualification,
-      .profile-info .bio {
-        width: 100%;
-      }
-    }
-
-    /*  shrink link padding/font on very narrow screens */
-    @media (max-width: 500px) {
-      nav a {
-        font-size: 12px;
-        padding: 6px 8px;
-      }
-      nav li {
-        margin: 0 4px;
-      }
-    }
+        /* Responsive adjustment */
+        @media (max-width: 768px) {
+            main {
+                margin-top: 120px;
+            }
+            .profile-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-photo img {
+                margin: 0 0 20px;
+            }
+            .profile-card {
+                max-width: calc(100% - 40px);
+                margin: 20px auto;
+            }
+            .profile-info .name,
+            .profile-info .qualification,
+            .profile-info .bio {
+                width: 100%;
+            }
+        }
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -225,8 +194,6 @@
     </main>
 </body>
 </html>
-
-
 
 
 
