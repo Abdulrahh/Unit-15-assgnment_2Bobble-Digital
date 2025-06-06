@@ -6,8 +6,7 @@
     the webpage, they help improve SEO and  page responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jobs – Bobble Digital</title>
-  <style>
-    
+ <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,32 +19,53 @@
       color: #202124;
     }
 
-    
+    /* Header styling (logo + navigation) */
     header {
       background-color: #ffffff;
-      padding: 20px 20px;       
+      padding: 20px 20px;
       border-bottom: 1px solid #ccc;
+
+     
+      /* Make header a flex container */
       display: flex;
-      align-items: center;     
+      align-items: center;
+
+      /* Push logo to left and nav to right */
+      justify-content: space-between;
+
+      /* Allow the header’s contents to wrap if it absolutely can’t fit */
+      flex-wrap: wrap;
+      /* ↑––––––––––––––––––––––––––––––––––––––––––––––↑ */
+
       position: relative;
       z-index: 10;
     }
 
-    
     header img {
       height: 100px;
       width: auto;
-      margin-right: 20px;       
+      margin-right: 20px; /* space between logo & nav on wide screens */
     }
 
     nav {
       display: flex;
       align-items: center;
+
+     
+      /* Allow nav block itself to wrap under the logo if needed */
+      flex-wrap: wrap;
+      
     }
 
     nav ul {
       list-style: none;
       display: flex;
+      padding: 0;
+
+      
+      /* Let the <li> items wrap onto a new line if there’s not enough width */
+      flex-wrap: wrap;
+     
     }
 
     nav li {
@@ -67,13 +87,12 @@
       color: #ffffff;
     }
 
-    
+    /* Ensure main content sits below the header */
     main {
-      margin-top: 140px;
-      padding: 0 20px;   
+      margin-top: 140px; 
+      padding: 0 20px;   /* optional side padding */
     }
 
-    
     .jobs-header {
       text-align: center;
       margin-bottom: 24px;
@@ -99,7 +118,6 @@
       background-color: #0056b3;
     }
 
-    
     .jobs-container {
       max-width: 800px;
       margin: 40px auto;
@@ -112,7 +130,6 @@
       margin-bottom: 40px;
     }
 
-    
     .job-card .section {
       background-color: #ffffff;
       border: 1px solid #ccc;
@@ -122,26 +139,34 @@
       line-height: 1.4;
     }
 
-   
     .job-card .section.title {
       text-align: center;
       font-weight: bold;
       font-size: 1.1rem;
     }
 
-   
     .job-card .section:last-child {
       margin-bottom: 0;
     }
 
-    
     @media (max-width: 768px) {
       main {
-        margin-top: 120px; 
+        margin-top: 120px;
       }
       .jobs-container {
         margin: 20px auto;
         padding: 16px;
+      }
+    }
+
+    /* shrink link padding/font on very narrow phones ===== */
+    @media (max-width: 500px) {
+      nav a {
+        font-size: 12px;
+        padding: 6px 8px;
+      }
+      nav li {
+        margin: 0 4px;
       }
     }
   </style>
