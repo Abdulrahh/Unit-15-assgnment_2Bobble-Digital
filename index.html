@@ -8,158 +8,133 @@
     <title>Bobble Digital | Home</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    /* Universal reset + default font */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+        /* Universal reset + default font */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    body {
-      background: #e0e0e0;
-      color: #202124;
-    }
+        body {
+            background: #e0e0e0;
+            color: #202124;
+        }
 
-    /* Header styling (logo + navigation) */
-    header {
-      background-color: #ffffff;
-      padding: 20px 20px;
-      border-bottom: 1px solid #ccc;
+        /* Header styling (logo + navigation) */
+        header {
+            background-color: #ffffff;
+            padding: 20px 20px;       
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;      
+            position: relative;
+            z-index: 10;
+        }
 
-      /* Keep header as a flex container */
-      display: flex;
-      align-items: center;
+        
+        header img {
+            height: 100px;
+            width: auto;
+            margin-right: 20px;       
+        }
 
-      /*  Push logo left, nav right */
-      justify-content: space-between;
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-      /* OPTIONAL: allow the entire header contents to wrap onto multiple lines if needed */
-      flex-wrap: wrap;
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
 
-      position: relative;
-      z-index: 10;
-    }
+        nav li {
+            margin: 0 10px;
+        }
 
-    header img {
-      height: 100px;
-      width: auto;
-      margin-right: 20px; /* keeps a little space between logo and nav on wide screens */
-    }
+        nav a {
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            color: #007BFF;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    nav {
-      display: flex;
-      align-items: center;
+        nav a:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+        }
 
-      /*  allow nav to drop below logo if it absolutely can’t fit */
-      flex-wrap: wrap;
-    }
+       
+        main {
+            margin-top: 140px; 
+            padding: 0 20px;   
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
+        
+        .jobs-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
 
-      /* Allow the <li> items to wrap onto a new line if there isn't enough horizontal space */
-      flex-wrap: wrap;
-    }
+        .jobs-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
 
-    nav li {
-      margin: 0 10px;
-    }
+        .apply-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
 
-    nav a {
-      text-decoration: none;
-      padding: 8px 12px;
-      border: 1px solid #007BFF;
-      border-radius: 4px;
-      color: #007BFF;
-      font-size: 14px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+        .apply-button:hover {
+            background-color: #0056b3;
+        }
 
-    nav a:hover {
-      background-color: #007BFF;
-      color: #ffffff;
-    }
+        
+        .wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
 
-    main {
-      margin-top: 140px;
-      padding: 0 20px;
-    }
+        .image-box, .text-box {
+            display: inline-block;
+            vertical-align: top;
+            border: 2px solid #555;
+            padding: 10px;
+            margin: 5px;
+        }
 
-    .jobs-header {
-      text-align: center;
-      margin-bottom: 24px;
-    }
+        .text-box {
+            width: 400px;
+            text-align: left;
+        }
 
-    .jobs-header h2 {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    .apply-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #007BFF;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .apply-button:hover {
-      background-color: #0056b3;
-    }
-
-    .wrapper {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .image-box,
-    .text-box {
-      display: inline-block;
-      vertical-align: top;
-      border: 2px solid #555;
-      padding: 10px;
-      margin: 5px;
-    }
-
-    .text-box {
-      width: 400px;
-      text-align: left;
-    }
-
-    /* Responsive adjustment */
-    @media (max-width: 768px) {
-      main {
-        margin-top: 120px;
-      }
-      .image-box,
-      .text-box {
-        display: block;
-        width: calc(100% - 40px);
-        margin: 10px auto;
-      }
-      .text-box {
-        width: calc(100% - 40px);
-      }
-    }
-
-    /* ===== Optional: shrink link padding/font on very small screens ===== */
-    @media (max-width: 500px) {
-      nav a {
-        font-size: 12px;
-        padding: 6px 8px;
-      }
-      nav li {
-        margin: 0 4px;
-      }
-    }
-  </style>
-</head>
+        /* Responsive adjustment */
+        @media (max-width: 768px) {
+            main {
+                margin-top: 120px; 
+            }
+            .image-box, .text-box {
+                display: block;
+                width: calc(100% - 40px);
+                margin: 10px auto;
+            }
+            .text-box {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -211,9 +186,6 @@
     </main>
 </body>
 </html>
-
-
-
 
 
 
